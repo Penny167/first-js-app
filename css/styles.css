@@ -1,0 +1,13 @@
+body {
+  color: #efe96b;
+  background-color: #ef6bb3;
+  font-family: 'Acme', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
