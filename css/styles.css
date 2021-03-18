@@ -3,13 +3,14 @@ body {
   background-color: #ef6bb3;
   font-family: 'Acme', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.6;
   text-align: center;
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 2em;
   font-weight: 700;
   text-align: center;
+  margin: 1.5em 0;
 }
