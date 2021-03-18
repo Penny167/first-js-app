@@ -6,8 +6,15 @@ let pokemonList = [
 ];
 
 //  create a for loop that iterates over each item in pokemonList and returns its name and height
-for (let i = 0; i < pokemonList.length; i++) {
+/*  for (let i = 0; i < pokemonList.length; i++) {
 //  document.write((pokemonList[i].name + ' ' + '(height: ' + pokemonList[i].height) + ')');
 //  using a template literal instead:
 document.write(`${pokemonList[i].name} (height: ${pokemonList[i].height})`);
+}  */
+
+/*  this time, I am storing my result as a variable so that I can neatly include
+it within html <p> tags. This will also display the results on separate lines  */
+for (let i = 0; i < pokemonList.length; i++) {
+  let pokemonStats = `${pokemonList[i].name} (height: ${pokemonList[i].height})`;
+  document.write('<p>' + pokemonStats + '</p>');
 }
