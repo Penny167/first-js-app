@@ -23,7 +23,14 @@ of highlighting "special" pokemon */
   let pokemonHeight = pokemonList[i].height;
 /*  now I am redefining the content that I want to display to include the result
 of the conditional statement within the <p> tags  */
-  if (pokemonHeight > 3) {
+/*  if (pokemonHeight > 3) {
     document.write('<p>' + pokemonStats + " Wow,that's big!" + '</p>');
   } else document.write('<p>' + pokemonStats + '</p>');
+}  */
+
+//  now I am rewriting the above code using a template literal to improve readability
+
+  if (pokemonHeight > 3) {
+    document.write(`<p>${pokemonStats} Wow,that's big!</p>`);
+  } else document.write(`<p>${pokemonStats}</p>`);
 }
