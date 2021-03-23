@@ -47,10 +47,11 @@ let pokemonList = [
   {name: 'Wigglytuff', height: 3.25, types:['normal', 'fairy'], weaknesses:['steel', 'poison']}
 ];
 
-for (let i = 0; i < pokemonList.length; i++) {
-  let pokemonStats = `${pokemonList[i].name} (height: ${pokemonList[i].height})`;
-  let pokemonHeight = pokemonList[i].height;
+//replace for loop with forEach() function
+pokemonList.forEach(function(pokemon) {
+  let pokemonStats = `${pokemon.name} (height: ${pokemon.height})`;
+  let pokemonHeight = pokemon.height;
   if (pokemonHeight > 3) {
     document.write(`<p>${pokemonStats} Wow,that's big!</p>`);
   } else document.write(`<p>${pokemonStats}</p>`);
-}
+});
