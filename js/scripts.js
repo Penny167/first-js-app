@@ -52,19 +52,23 @@ let pokemonRepository = (function(){
   function getAll() {
     return pokemonList;
   }
-
+//  Adding conditional to 'add' function to ensure that only objects can be passed as arguments
   function add(pokemon) {
-    pokemonList.push(pokemon);
+    if (typeof pokemon === 'object') {
+      pokemonList.push(pokemon);
+    }
   }
 
   return {
     getAll: getAll,
-    add: add    
+    add: add
   };
 })();
 
-//replace for loop with forEach() function
-pokemonList.forEach(function(pokemon) {
+//  replace for loop with forEach() function
+/*  update array name in the forEach function to reference the array via the getAll
+key within the IIFE 'pokemonRepository'  */
+pokemonRepository.getAll().forEach(function(pokemon) {
   let pokemonStats = `${pokemon.name} (height: ${pokemon.height})`;
   let pokemonHeight = pokemon.height;
   if (pokemonHeight > 3) {
