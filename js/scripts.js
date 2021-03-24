@@ -39,13 +39,15 @@ of the conditional statement within the <p> tags  */
 without the comments to work on the next set of changes, whilst preserving
 the old version including the comments in a commented out version above  */
 
-
-let pokemonList = [
-  {name: 'Charmander', height: 2, types:['fire'], weaknesses:['water', 'ground', 'rock']},
-  {name: 'Pikachu', height: 1.33, types:['electric'], weaknesses:['ground']},
-  {name: 'Jigglypuff', height: 1.67, types:['normal', 'fairy'], weaknesses:['steel', 'poison']},
-  {name: 'Wigglytuff', height: 3.25, types:['normal', 'fairy'], weaknesses:['steel', 'poison']}
-];
+//Creating an IIFE to house the pokemonList
+let pokemonRepository = (function(){
+  let pokemonList = [
+    {name: 'Charmander', height: 2, types:['fire'], weaknesses:['water', 'ground', 'rock']},
+    {name: 'Pikachu', height: 1.33, types:['electric'], weaknesses:['ground']},
+    {name: 'Jigglypuff', height: 1.67, types:['normal', 'fairy'], weaknesses:['steel', 'poison']},
+    {name: 'Wigglytuff', height: 3.25, types:['normal', 'fairy'], weaknesses:['steel', 'poison']}
+  ];
+})();
 
 //replace for loop with forEach() function
 pokemonList.forEach(function(pokemon) {
