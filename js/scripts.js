@@ -39,7 +39,7 @@ of the conditional statement within the <p> tags  */
 without the comments to work on the next set of changes, whilst preserving
 the old version including the comments in a commented out version above  */
 
-//Creating an IIFE to house the pokemonList
+//  Creating an IIFE to house the pokemonList
 let pokemonRepository = (function(){
   let pokemonList = [
     {name: 'Charmander', height: 2, types:['fire'], weaknesses:['water', 'ground', 'rock']},
@@ -47,6 +47,15 @@ let pokemonRepository = (function(){
     {name: 'Jigglypuff', height: 1.67, types:['normal', 'fairy'], weaknesses:['steel', 'poison']},
     {name: 'Wigglytuff', height: 3.25, types:['normal', 'fairy'], weaknesses:['steel', 'poison']}
   ];
+//  The IIFE will return an object with 2 keys
+  return {
+    getAll: function(){
+      return pokemonList;
+    },
+    add: function(pokemon){
+      pokemonList.push(pokemon);
+    }
+  };
 })();
 
 //replace for loop with forEach() function
