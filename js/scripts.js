@@ -47,7 +47,7 @@ let pokemonRepository = (function(){
     {name: 'Jigglypuff', height: 1.67, types:['normal', 'fairy'], weaknesses:['steel', 'poison']},
     {name: 'Wigglytuff', height: 3.25, types:['normal', 'fairy'], weaknesses:['steel', 'poison']}
   ];
-//  The IIFE will return an object with 2 keys
+//  The IIFE will return an object with 3 keys
 //  I am separating the functions that define the values of the keys from the return statement
   function getAll() {
     return pokemonList;
@@ -62,10 +62,16 @@ and stored this as a variable that I am then comparing to my defined string of r
         pokemonList.push(pokemon);
     }
   }
+//  Adding a third function to allow users to search for a pokemon just using name
+  function find(pokemonName) {
+    let found = pokemonList.filter(pokemon => pokemon.name === pokemonName);
+    return found;
+  }
 
   return {
     getAll: getAll,
-    add: add
+    add: add,
+    find: find
   };
 })();
 
