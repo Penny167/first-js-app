@@ -53,9 +53,13 @@ let pokemonRepository = (function(){
     return pokemonList;
   }
 //  Adding conditional to 'add' function to ensure that only objects can be passed as arguments
+/* Adding second condition to check that pokemon must also have expected properties. In order
+to ensure the key names match exactly I have converted the pokemon object keys array to a string
+and stored this as a variable that I am then comparing to my defined string of required keys  */
   function add(pokemon) {
-    if (typeof pokemon === 'object') {
-      pokemonList.push(pokemon);
+    let pokemonKeys = Object.keys(pokemon).toString();
+    if (typeof pokemon === 'object' && pokemonKeys === 'name,height,types,weaknesses') {
+        pokemonList.push(pokemon);
     }
   }
 
@@ -65,6 +69,8 @@ let pokemonRepository = (function(){
   };
 })();
 
+//  This is a new pokemon that I am using to test whether the conditions of the add function work
+pokemonRepository.add({name: 'Ivysaur', height: 1, types:['grass', 'poison'], weaknesses: ['fire', 'psychic', 'flying', 'ice']});
 //  replace for loop with forEach() function
 /*  update array name in the forEach function to reference the array via the getAll
 key within the IIFE 'pokemonRepository'  */
