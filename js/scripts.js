@@ -104,5 +104,5 @@ key within the IIFE 'pokemonRepository'  */
 });  */
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-
+  pokemonRepository.addListItem(pokemon);
 });
