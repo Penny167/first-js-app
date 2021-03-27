@@ -62,7 +62,19 @@ and stored this as a variable that I am then comparing to my defined string of r
         pokemonList.push(pokemon);
     }
   }
-//  Adding a third function to allow users to search for a pokemon just using name
+
+//  Adding a new addListItem() function
+  function addListItem(pokemon) {
+    let outputList = document.querySelector('ul');
+    let outputListItem = document.createElement('li');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('pokemon-button');
+    outputListItem.appendChild(button);
+    outputList.appendChild(outputListItem);
+  }
+
+//  Adding a function to allow users to search for a pokemon just using name
   function find(pokemonName) {
     let found = pokemonList.filter(pokemon => pokemon.name === pokemonName);
     return found;
@@ -91,11 +103,5 @@ key within the IIFE 'pokemonRepository'  */
 });  */
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-  let outputList = document.querySelector('ul');
-  let outputListItem = document.createElement('li');
-  let button = document.createElement('button');
-  button.innerText = pokemon.name;
-  button.classList.add('pokemon-button');
-  outputListItem.appendChild(button);
-  outputList.appendChild(outputListItem);
+
 });
