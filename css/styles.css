@@ -15,6 +15,11 @@ h1 {
   margin: 1.5em 0;
 }
 
+.pokemon-button {
+  color: #efe96b;
+  background-color: #ef6bb3;  
+}
+
 @media all and (min-width: 750px) {
   body {
     font-size: 1.25rem;
