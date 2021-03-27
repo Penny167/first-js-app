@@ -91,6 +91,7 @@ key within the IIFE 'pokemonRepository'  */
 });  */
 
 pokemonRepository.getAll().forEach(function(pokemon) {
+  let outputList = document.querySelector('ul');
   let pokemonStats = `${pokemon.name} (height: ${pokemon.height})`;
   let pokemonHeight = pokemon.height;
   if (pokemonHeight > 3) {
