@@ -83,6 +83,7 @@ and stored this as a variable that I am then comparing to my defined string of r
   return {
     getAll: getAll,
     add: add,
+    addListItem: addListItem,
     find: find
   };
 })();
