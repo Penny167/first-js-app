@@ -77,13 +77,23 @@ and stored this as a variable that I am then comparing to my defined string of r
 
 //  This is a new pokemon that I am using to test whether the conditions of the add function work
 pokemonRepository.add({name: 'Ivysaur', height: 1, types:['grass', 'poison'], weaknesses: ['fire', 'psychic', 'flying', 'ice']});
+
+//  I am commenting out this version of the forEach code block to create a fresh version for task 6
 //  replace for loop with forEach() function
 /*  update array name in the forEach function to reference the array via the getAll
 key within the IIFE 'pokemonRepository'  */
-pokemonRepository.getAll().forEach(function(pokemon) {
+/*  pokemonRepository.getAll().forEach(function(pokemon) {
   let pokemonStats = `${pokemon.name} (height: ${pokemon.height})`;
   let pokemonHeight = pokemon.height;
   if (pokemonHeight > 3) {
     document.write(`<p>${pokemonStats} Wow,that's big!</p>`);
   } else document.write(`<p>${pokemonStats}</p>`);
+});  */
+
+pokemonRepository.getAll().forEach(function(pokemon) {
+  let pokemonStats = `${pokemon.name} (height: ${pokemon.height})`;
+  let pokemonHeight = pokemon.height;
+  if (pokemonHeight > 3) {
+    document.write(`<p>${pokemonStats} Wow,that's big!</p>`);
+    } else document.write(`<p>${pokemonStats}</p>`);
 });
