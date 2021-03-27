@@ -94,4 +94,5 @@ pokemonRepository.getAll().forEach(function(pokemon) {
   let outputList = document.querySelector('ul');
   let outputListIem = document.createElement('li');
   let button = document.createElement('button');
+  button.innerText = pokemon.name;
 });
