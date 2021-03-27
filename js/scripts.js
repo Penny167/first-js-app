@@ -97,4 +97,5 @@ pokemonRepository.getAll().forEach(function(pokemon) {
   button.innerText = pokemon.name;
   button.classList.add('pokemon-button');
   outputListItem.appendChild(button);
+  outputList.appendChild(outputListItem);
 });
