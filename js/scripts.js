@@ -74,6 +74,11 @@ and stored this as a variable that I am then comparing to my defined string of r
     outputList.appendChild(outputListItem);
   }
 
+//  Adding a function to allow users to see details of a pokemon when clicked
+  function showDetails(pokemon) {
+    console.log(pokemon);
+  }
+
 //  Adding a function to allow users to search for a pokemon just using name
   function find(pokemonName) {
     let found = pokemonList.filter(pokemon => pokemon.name === pokemonName);
@@ -84,6 +89,7 @@ and stored this as a variable that I am then comparing to my defined string of r
     getAll: getAll,
     add: add,
     addListItem: addListItem,
+    showDetails: showDetails,
     find: find
   };
 })();
