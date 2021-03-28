@@ -53,7 +53,7 @@ let pokemonRepository = (function(){
     return pokemonList;
   }
 //  Adding conditional to 'add' function to ensure that only objects can be passed as arguments
-/* Adding second condition to check that pokemon must also have expected properties. In order
+/*  Adding second condition to check that pokemon must also have expected properties. In order
 to ensure the key names match exactly I have converted the pokemon object keys array to a string
 and stored this as a variable that I am then comparing to my defined string of required keys  */
   function add(pokemon) {
@@ -70,8 +70,21 @@ and stored this as a variable that I am then comparing to my defined string of r
     let button = document.createElement('button');
     button.innerText = pokemon.name;
     button.classList.add('pokemon-button');
+/*  The code below is superseded by the additional function addButtonListener,
+which has been created below to separate adding new items from adding new event listeners  */
+/*    button.addEventListener('click', function(){
+      showDetails(pokemon);
+    });  */
     outputListItem.appendChild(button);
     outputList.appendChild(outputListItem);
+    addButtonListener(button, pokemon);
+  }
+
+// Adding a function to create event listeners on newly created buttons
+  function addButtonListener(button, pokemon) {
+    button.addEventListener('click', function(){
+      showDetails(pokemon);
+    });
   }
 
 //  Adding a function to allow users to see details of a pokemon when clicked
@@ -89,6 +102,7 @@ and stored this as a variable that I am then comparing to my defined string of r
     getAll: getAll,
     add: add,
     addListItem: addListItem,
+    addButtonListener: addButtonListener,
     showDetails: showDetails,
     find: find
   };
