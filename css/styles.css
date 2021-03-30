@@ -30,22 +30,26 @@ ul {
   border-radius: 20px;
   box-shadow: -0.25em 0.175em #4287f5;
   text-shadow: -0.15em 0.075em #4287f5;
+  transition: font-size 250ms ease-out;
 }
 
 .pokemon-button:hover,
 .pokemon-button:focus {
   cursor: pointer;
   outline-style: none;
+  font-size: 1.3rem;
 }
 
 .pokemon-button:active {
   background-color: #4287f5;
-  border: 3px solid #efe96b;
-  border-radius: 20px;
 }
 
 @media all and (min-width: 750px) {
   body {
     font-size: 1.4rem;
+  }
+  .pokemon-button:hover,
+  .pokemon-button:focus {
+    font-size: 1.7rem;
   }
 }
