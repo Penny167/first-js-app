@@ -47,7 +47,7 @@ let pokemonRepository = (function(){
     {name: 'Jigglypuff', height: 1.67, types:['normal', 'fairy'], weaknesses:['steel', 'poison']},
     {name: 'Wigglytuff', height: 3.25, types:['normal', 'fairy'], weaknesses:['steel', 'poison']}
   ];
-//  The IIFE will return an object with 3 keys
+//  The IIFE will return an object with keys for each function
 //  I am separating the functions that define the values of the keys from the return statement
   function getAll() {
     return pokemonList;
