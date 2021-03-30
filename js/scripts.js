@@ -89,7 +89,7 @@ which has been created below to separate adding new items from adding new event 
 
 //  Adding a function to allow users to see details of a pokemon when clicked
   function showDetails(pokemon) {
-    console.log(pokemon);
+    console.log(pokemon.name);
   }
 
 //  Adding a function to allow users to search for a pokemon just using name
