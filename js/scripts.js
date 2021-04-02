@@ -44,6 +44,8 @@ let pokemonRepository = (function(){
 /* I am now deleting the array contents so these can be replaced by the dynamic data from
 the pokeapi (NB I have a copy of the original static data retained at the top of the file)  */
   let pokemonList = [];
+//  Storing the url of the api in a variable
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 //  The IIFE will return an object with keys for each function
 //  I am separating the functions that define the values of the keys from the return statement
   function getAll() {
