@@ -103,13 +103,31 @@ which has been created below to separate adding new items from adding new event 
     return found;
   }
 
+//  Adding a function to load pokemon data from the pokeapi asynchronously
+  function loadList() {
+    return fetch(apiUrl).then(function(response){
+      return response.json();
+    }).then(function(pokemonData){
+      pokemonData.results.forEach(function(object){
+        let pokemon = {
+          name: object.name,
+          detailsUrl: object.url
+        };
+        add(pokemon);
+      });
+    }).catch(function(error){
+      console.log(error);
+    })
+  }
+
   return {
     getAll: getAll,
     add: add,
     addListItem: addListItem,
     addButtonListener: addButtonListener,
     showDetails: showDetails,
-    find: find
+    find: find,
+    loadList: loadList
   };
 })();
 
