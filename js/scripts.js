@@ -41,11 +41,10 @@ the old version including the comments in a commented out version above  */
 
 //  Creating an IIFE to house the pokemonList
 let pokemonRepository = (function(){
+/* I am now deleting the array contents so these can be replaced by the dynamic data from
+the pokeapi (NB I have a copy of the original static data retained at the top of the file)  */
   let pokemonList = [
-    {name: 'Charmander', height: 2, types:['fire'], weaknesses:['water', 'ground', 'rock']},
-    {name: 'Pikachu', height: 1.33, types:['electric'], weaknesses:['ground']},
-    {name: 'Jigglypuff', height: 1.67, types:['normal', 'fairy'], weaknesses:['steel', 'poison']},
-    {name: 'Wigglytuff', height: 3.25, types:['normal', 'fairy'], weaknesses:['steel', 'poison']}
+    
   ];
 //  The IIFE will return an object with keys for each function
 //  I am separating the functions that define the values of the keys from the return statement
