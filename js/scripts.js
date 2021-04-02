@@ -53,9 +53,15 @@ the pokeapi (NB I have a copy of the original static data retained at the top of
 /*  Adding second condition to check that pokemon must also have expected properties. In order
 to ensure the key names match exactly I have converted the pokemon object keys array to a string
 and stored this as a variable that I am then comparing to my defined string of required keys  */
+/*  I am now revising the add function to amend the list of required keys and improve the logic
+for checking these; the function will now loop over the array of required keys and check that
+this corresponds to the keys included rather than comparing array values converted to strings.  */
   function add(pokemon) {
-    let pokemonKeys = Object.keys(pokemon).toString();
-    if (typeof pokemon === 'object' && pokemonKeys === 'name,height,types,weaknesses') {
+    let pokemonKeys = Object.keys(pokemon);
+    let requiredKeys = ['name', 'detailsUrl'];
+    if (typeof pokemon === 'object' && requiredKeys.forEach(function(key){
+      pokemonKeys.includes(key)
+    }) {
         pokemonList.push(pokemon);
     }
   }
