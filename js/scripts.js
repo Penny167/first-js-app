@@ -117,8 +117,22 @@ which has been created below to separate adding new items from adding new event 
       });
     }).catch(function(error){
       console.log(error);
-    })
+    });
   }
+
+//  Adding a function to load pokemon details from the detailsUrl for a selected pokemon
+  function loadDetails(pokemon) {
+    return fetch(pokemon.detailsUrl).then(function(response){
+      return response.json();
+    }).then(function(pokemonDetails){
+      pokemon.height = pokemonDetails.height;
+      pokemon.imgUrl = pokemonDetails.sprites.front_default;
+      pokemon.types = pokemonDetails.types;
+    }).catch(function(error){
+      console.log(error);
+    });
+  }
+
 
   return {
     getAll: getAll,
@@ -127,7 +141,8 @@ which has been created below to separate adding new items from adding new event 
     addButtonListener: addButtonListener,
     showDetails: showDetails,
     find: find,
-    loadList: loadList
+    loadList: loadList,
+    loadDetails: loadDetails
   };
 })();
 
