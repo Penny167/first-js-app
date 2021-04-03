@@ -162,6 +162,8 @@ key within the IIFE 'pokemonRepository'  */
   } else document.write(`<p>${pokemonStats}</p>`);
 });  */
 
+//  Calling the loadList function to retrieve data prior to rendering the page
+pokemonRepository.loadList();
 pokemonRepository.getAll().forEach(function(pokemon) {
   pokemonRepository.addListItem(pokemon);
 });
