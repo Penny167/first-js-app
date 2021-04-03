@@ -147,7 +147,8 @@ which has been created below to separate adding new items from adding new event 
 })();
 
 //  This is a new pokemon that I am using to test whether the conditions of the add function work
-pokemonRepository.add({name: 'Ivysaur', height: 1, types:['grass', 'poison'], weaknesses: ['fire', 'psychic', 'flying', 'ice']});
+/*  Commenting this out for that I am loading pokemons directly from the api data
+pokemonRepository.add({name: 'Ivysaur', height: 1, types:['grass', 'poison'], weaknesses: ['fire', 'psychic', 'flying', 'ice']});  */
 
 //  I am commenting out this version of the forEach code block to create a fresh version for task 6
 //  replace for loop with forEach() function
