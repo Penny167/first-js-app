@@ -57,15 +57,25 @@ to ensure the key names match exactly I have converted the pokemon object keys a
 and stored this as a variable that I am then comparing to my defined string of required keys  */
 /*  I am now revising the add function to amend the list of required keys and improve the logic
 for checking these; the function will now loop over the array of required keys and check that
-this corresponds to the keys included rather than comparing array values converted to strings.  */
+this corresponds to the keys included rather than comparing array values converted to strings.
+Note that this requires an additional function to compare the array values.  */
+  function areArraysEqual(array1, array2) {
+    let isEqual = true;
+    array1.forEach(function(itemInArray1) {
+      if (!array2.includes(itemInArray1)) {
+        isEqual = false;
+      }
+    });
+    return isEqual;
+  }
+
   function add(pokemon) {
-/*    let pokemonKeys = Object.keys(pokemon);
+    let pokemonKeys = Object.keys(pokemon);
     let requiredKeys = ['name', 'detailsUrl'];
-    if (typeof pokemon === 'object' && requiredKeys.forEach(function(key){
-      pokemonKeys.includes(key)
-    }) {  */
+    let result = areArraysEqual(requiredKeys, pokemonKeys);
+    if (typeof pokemon === 'object' && result === true) {
         pokemonList.push(pokemon);
-//    }
+    }
   }
 
 //  Adding a new addListItem() function
@@ -96,7 +106,7 @@ which has been created below to separate adding new items from adding new event 
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function(){
     console.log(pokemon);
-    });  
+    });
   }
 
 //  Adding a function to allow users to search for a pokemon just using name
