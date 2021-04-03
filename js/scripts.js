@@ -59,13 +59,13 @@ and stored this as a variable that I am then comparing to my defined string of r
 for checking these; the function will now loop over the array of required keys and check that
 this corresponds to the keys included rather than comparing array values converted to strings.  */
   function add(pokemon) {
-    let pokemonKeys = Object.keys(pokemon);
+/*    let pokemonKeys = Object.keys(pokemon);
     let requiredKeys = ['name', 'detailsUrl'];
     if (typeof pokemon === 'object' && requiredKeys.forEach(function(key){
       pokemonKeys.includes(key)
-    }) {
+    }) {  */
         pokemonList.push(pokemon);
-    }
+//    }
   }
 
 //  Adding a new addListItem() function
