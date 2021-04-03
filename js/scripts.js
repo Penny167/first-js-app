@@ -163,7 +163,8 @@ key within the IIFE 'pokemonRepository'  */
 });  */
 
 //  Calling the loadList function to retrieve data prior to rendering the page
-pokemonRepository.loadList();
-pokemonRepository.getAll().forEach(function(pokemon) {
+pokemonRepository.loadList().then(function(){
+  pokemonRepository.getAll().forEach(function(pokemon) {
   pokemonRepository.addListItem(pokemon);
+  });
 });
