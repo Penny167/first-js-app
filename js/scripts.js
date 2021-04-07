@@ -140,6 +140,15 @@ which has been created below to separate adding new items from adding new event 
     modalContainer.classList.remove('visible');
   }
 
+// Adding an event listener to the window to close the modal when the user presses 'Escape'
+  window.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modalContainer.classList.contains('visible')) {
+      hideDetails();
+    }
+  });
+
+
+
 //  Adding a function to allow users to search for a pokemon just using name
   function find(pokemonName) {
     let found = pokemonList.filter(pokemon => pokemon.name === pokemonName);
