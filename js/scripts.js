@@ -135,6 +135,11 @@ which has been created below to separate adding new items from adding new event 
     });
   }
 
+//  Adding a function to hide pokemon details when the close button in the modal is clicked
+  function hideDetails () {
+    modalContainer.classList.remove('visible');
+  }
+
 //  Adding a function to allow users to search for a pokemon just using name
   function find(pokemonName) {
     let found = pokemonList.filter(pokemon => pokemon.name === pokemonName);
