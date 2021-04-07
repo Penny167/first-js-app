@@ -46,6 +46,8 @@ the pokeapi (NB I have a copy of the original static data retained at the top of
   let pokemonList = [];
 //  Storing the url of the api in a variable
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+//  Creating a variable for the modal container as it is used in multiple places
+  let modalContainer = document.querySelector('#modal-container');
 //  The IIFE will return an object with keys for each function
 //  I am separating the functions that define the values of the keys from the return statement
   function getAll() {
