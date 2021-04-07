@@ -147,8 +147,13 @@ which has been created below to separate adding new items from adding new event 
     }
   });
 
-
-
+// Adding event listener to modal container to close modal if user clicks outside the modal
+  modalContainer.addEventListener('click', function(e) {
+    if (e.target === modalContainer) {
+      hideDetails();
+    }
+  });
+  
 //  Adding a function to allow users to search for a pokemon just using name
   function find(pokemonName) {
     let found = pokemonList.filter(pokemon => pokemon.name === pokemonName);
