@@ -107,7 +107,31 @@ which has been created below to separate adding new items from adding new event 
 //  Adding a function to allow users to see details of a pokemon when clicked
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function(){
-    console.log(pokemon);
+    modalContainer.innerHTML = "";
+
+    let modal = document.createElement('div');
+    modal.classList.add('modal');
+
+    let closeButton = document.createElement('button');
+    closeButton.classList.add('close-button');
+    closeButton.innerText = 'x';
+    closeButton.addEventListener('click', hideDetails);
+
+    let title = document.createElement('h1');
+    title.innerText = pokemon.name;
+
+    let content = document.createElement('p');
+    content.innerText = pokemon.height;
+
+    let image = document.createElement('img');
+    image.src = pokemon.imgUrl;
+
+    modal.appendChild(closeButton);
+    modal.appendChild(title);
+    modal.appendChild(content);
+    modal.appendChild(image);
+    modalContainer.appendChild(modal);
+    modalContainer.classList.add('visible');
     });
   }
 
