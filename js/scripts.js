@@ -121,7 +121,7 @@ which has been created below to separate adding new items from adding new event 
     title.innerText = pokemon.name;
 
     let content = document.createElement('p');
-    content.innerText = pokemon.height;
+    content.innerText = ('height: '+ pokemon.height);
 
     let image = document.createElement('img');
     image.src = pokemon.imgUrl;
