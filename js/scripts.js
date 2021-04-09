@@ -153,7 +153,7 @@ which has been created below to separate adding new items from adding new event 
       hideDetails();
     }
   });
-  
+
 //  Adding a function to allow users to search for a pokemon just using name
   function find(pokemonName) {
     let found = pokemonList.filter(pokemon => pokemon.name === pokemonName);
