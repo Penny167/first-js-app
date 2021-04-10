@@ -96,6 +96,36 @@ ul {
   line-height: 1.6;
 }
 
+@media all and (max-width: 320px) {
+  .modal {
+    width: 40vw;
+    margin: 20vh auto;
+    padding: 4vw;
+  }
+  .modal h1,
+  .close-button {
+    font-size: 0.8em;
+  }
+  p {
+    font-size: 0.7rem;
+  }
+}
+
+@media all and (min-width: 321px) and (max-width: 749px) {
+  .modal {
+    width: 40vw;
+    margin: 20vh auto;
+    padding: 5vw;
+  }
+  .modal h1,
+  .close-button {
+    font-size: 0.9em;
+  }
+  p {
+    font-size: 0.75rem;
+  }
+}
+
 @media all and (min-width: 750px) {
   body {
     font-size: 1.4rem;
@@ -103,5 +133,29 @@ ul {
   .pokemon-button:hover,
   .pokemon-button:focus {
     font-size: 1.7rem;
+  }
+}
+
+@media all and (min-width: 750px) and (max-width: 1200px) {
+  .modal {
+    width: 30vw;
+    margin: 20vh auto;
+  }
+  .modal h1,
+  .close-button {
+    font-size: 1.2em;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+}
+
+@media all and (min-width: 1500px) {
+  #modal-container.visible {
+    padding: 5vw;
+  }
+  .modal {
+    width: 20vw;
+    padding: 3vw;
   }
 }
