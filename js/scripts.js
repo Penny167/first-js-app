@@ -113,7 +113,7 @@ which has been created below to separate adding new items from adding new event 
     modalContainer.innerHTML = "";
 
     let modal = document.createElement('div');
-    modal.classList.add('modal');
+    modal.classList.add('modal', 'modal-dialog');
 
     let closeButton = document.createElement('button');
     closeButton.classList.add('close-button');
