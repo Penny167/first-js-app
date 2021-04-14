@@ -87,14 +87,14 @@ h1 {
   width: 50%;
 }
 
-.close-button {
+/*  .close-button {
   float: right;
   border: 0;
   background: none;
   color: inherit;
   font-size: 1.5em;
   line-height: 1.6;
-}
+}  */
 
 @media all and (max-width: 320px) {
   .modal {
