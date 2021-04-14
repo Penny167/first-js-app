@@ -118,6 +118,9 @@ which has been created below to separate adding new items from adding new event 
     let modalContent = document.createElement('div');
     modalContent.classList.add('modal-content');
 
+    let modalHeader = document.createElement('div');
+    modalHeader.classList.add('modal-header');
+
     let closeButton = document.createElement('button');
     closeButton.classList.add('close-button');
     closeButton.innerText = 'x';
@@ -133,6 +136,7 @@ which has been created below to separate adding new items from adding new event 
     image.src = pokemon.imgUrl;
 
     modal.appendChild(modalContent);
+    modalContent.appendChild(modalHeader);
     modal.appendChild(closeButton);
     modal.appendChild(title);
     modal.appendChild(content);
