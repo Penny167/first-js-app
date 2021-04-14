@@ -84,6 +84,7 @@ Note that this requires an additional function to compare the array values.  */
   function addListItem(pokemon) {
     let outputList = document.querySelector('ul');
     let outputListItem = document.createElement('li');
+    outputListItem.classList.add('list-group-item');
     let button = document.createElement('button');
     button.innerText = pokemon.name;
     button.classList.add('pokemon-button');
