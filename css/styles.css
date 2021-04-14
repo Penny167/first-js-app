@@ -44,7 +44,7 @@ h1 {
   background-color: #4287f5;
 }  */
 
-#modal-container {
+/*  #modal-container {
   display: none;
 }
 
@@ -59,7 +59,7 @@ h1 {
   background: rgba(66,135,245,0.5);
   z-index: 999;
   padding: 10vw;
-}
+}  */
 
 .modal {
   box-sizing: border-box;
