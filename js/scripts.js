@@ -140,7 +140,7 @@ which has been created below to separate adding new items from adding new event 
 
     modal.appendChild(modalContent);
     modalContent.appendChild(modalHeader);
-    modal.appendChild(closeButton);
+    modalHeader.appendChild(closeButton);
     modalHeader.appendChild(title);
     modal.appendChild(content);
     modal.appendChild(image);
