@@ -132,6 +132,9 @@ which has been created below to separate adding new items from adding new event 
     title.innerText = pokemon.name;
     title.classList.add('modal-title');
 
+    let modalBody = document.createElement('div');
+    modalBody.classList.add('modal-body');
+
     let content = document.createElement('p');
     content.innerText = ('height: '+ pokemon.height);
 
@@ -140,10 +143,11 @@ which has been created below to separate adding new items from adding new event 
 
     modal.appendChild(modalContent);
     modalContent.appendChild(modalHeader);
+    modalContent.appendChild(modalBody);
     modalHeader.appendChild(closeButton);
     modalHeader.appendChild(title);
-    modal.appendChild(content);
-    modal.appendChild(image);
+    modalBody.appendChild(content);
+    modalBody.appendChild(image);
     modalContainer.appendChild(modal);
     modalContainer.classList.add('visible');
     });
