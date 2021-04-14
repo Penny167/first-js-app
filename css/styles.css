@@ -16,10 +16,10 @@ h1 {
   text-shadow: -0.125em 0.05em #4287f5;
 }
 
-ul {
+/*ul {
   list-style-type: none;
   padding-inline-start: 0px;
-}
+}*/
 
 .pokemon-button {
   color: #efe96b;
