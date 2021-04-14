@@ -87,7 +87,7 @@ Note that this requires an additional function to compare the array values.  */
     outputListItem.classList.add('list-group-item');
     let button = document.createElement('button');
     button.innerText = pokemon.name;
-    button.classList.add('pokemon-button');
+    button.classList.add('pokemon-button', 'btn', 'btn-primary');
 /*  The code below is superseded by the additional function addButtonListener,
 which has been created below to separate adding new items from adding new event listeners  */
 /*    button.addEventListener('click', function(){
