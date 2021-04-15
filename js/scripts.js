@@ -98,19 +98,21 @@ which has been created below to separate adding new items from adding new event 
     outputListItem.appendChild(button);
     outputList.appendChild(outputListItem);
 //  Commenting this out as new button attributes will open Bootstrap modal
-//    addButtonListener(button, pokemon);
+//  Reinstating button because to create the modal content we still need a mechanism to invoke the showPokemon function
+    addButtonListener(button, pokemon);
   }
 
 // Adding a function to create event listeners on newly created buttons
 /*  I am commenting out all functionality related to the custom modal for now,
-in order to implement the Bootstrap modal
+in order to implement the Bootstrap modal  */
+//  Rewriting this function to point at the new showPokemon function
   function addButtonListener(button, pokemon) {
     button.addEventListener('click', function(){
-      showDetails(pokemon);
+      showPokemon(pokemon);
     });
   }
 
-//  Adding a function to allow users to see details of a pokemon when clicked
+/*  Adding a function to allow users to see details of a pokemon when clicked
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function(){
     modalContainer.innerHTML = "";
