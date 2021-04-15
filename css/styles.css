@@ -16,12 +16,12 @@ h1 {
   text-shadow: -0.125em 0.05em #4287f5;
 }
 
-/*ul {
+/*  ul {
   list-style-type: none;
   padding-inline-start: 0px;
-}*/
+}  */
 
-.pokemon-button {
+/*  .pokemon-button {
   color: #efe96b;
   background-color: #ef6bb3;
   padding: 1.25vh 9vw;
@@ -42,7 +42,7 @@ h1 {
 
 .pokemon-button:active {
   background-color: #4287f5;
-}
+}  */
 
 #modal-container {
   display: none;
@@ -130,10 +130,10 @@ h1 {
   body {
     font-size: 1.4rem;
   }
-  .pokemon-button:hover,
+/*  .pokemon-button:hover,
   .pokemon-button:focus {
     font-size: 1.7rem;
-  }
+  }  */
 }
 
 @media all and (min-width: 750px) and (max-width: 1200px) {
