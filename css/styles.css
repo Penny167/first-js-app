@@ -80,12 +80,12 @@ h1 {
   text-align: left;
 }  */
 
-.modal img {
+/*  .modal img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-}
+}  */
 
 /*  .close-button {
   float: right;
@@ -96,7 +96,7 @@ h1 {
   line-height: 1.6;
 }  */
 
-@media all and (max-width: 320px) {
+/*  @media all and (max-width: 320px) {
   .modal {
     width: 40vw;
     margin: 20vh auto;
@@ -133,10 +133,10 @@ h1 {
 /*  .pokemon-button:hover,
   .pokemon-button:focus {
     font-size: 1.7rem;
-  }  */
-}
+  }
+}  */
 
-@media all and (min-width: 750px) and (max-width: 1200px) {
+/*  @media all and (min-width: 750px) and (max-width: 1200px) {
   .modal {
     width: 30vw;
     margin: 20vh auto;
@@ -158,4 +158,4 @@ h1 {
     width: 20vw;
     padding: 3vw;
   }
-}
+}  */  

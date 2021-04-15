@@ -88,29 +88,29 @@ Note that this requires an additional function to compare the array values.  */
     let button = document.createElement('button');
     button.innerText = pokemon.name;
     button.classList.add('pokemon-button', 'btn', 'btn-primary');
-    button.setAttribute('data-toggle, modal');
-    button.setAttribute('data-target, modalContainer');
+    button.setAttribute('data-toggle', 'modal');
+    button.setAttribute('data-target', '#modal-container');
 /*  The code below is superseded by the additional function addButtonListener,
 which has been created below to separate adding new items from adding new event listeners  */
 /*    button.addEventListener('click', function(){
       showDetails(pokemon);
-    });  */
+    }); */
     outputListItem.appendChild(button);
     outputList.appendChild(outputListItem);
-    addButtonListener(button, pokemon);
   }
 
 // Adding a function to create event listeners on newly created buttons
-  function addButtonListener(button, pokemon) {
+//  Superseded by data-toggle modal attribute on buttons
+/*  function addButtonListener(button, pokemon) {
     button.addEventListener('click', function(){
       showDetails(pokemon);
     });
-  }
+  }  */
 
 //  Adding a function to allow users to see details of a pokemon when clicked
-  function showDetails(pokemon) {
+    function showDetails(pokemon) {
     loadDetails(pokemon).then(function(){
-    modalContainer.innerHTML = "";
+    modalContainer.innerHTML = ""; 
 
     let modal = document.createElement('div');
     modal.classList.add('modal', 'modal-dialog');
@@ -123,8 +123,8 @@ which has been created below to separate adding new items from adding new event 
 
     let closeButton = document.createElement('button');
     closeButton.classList.add('close-button', 'close');
-    closeButton.setAttribute('type, button');
-    closeButton.setAttribute('data-dismiss, modal');
+    closeButton.setAttribute('type', 'button');
+    closeButton.setAttribute('data-dismiss', 'modal');
     //  closeButton.innerText = 'x';
     //  closeButton.addEventListener('click', hideDetails);
 
@@ -149,11 +149,13 @@ which has been created below to separate adding new items from adding new event 
     modalBody.appendChild(content);
     modalBody.appendChild(image);
     modalContainer.appendChild(modal);
-    modalContainer.classList.add('visible');
+//Commenting out to use Bootstrap modal button functionality instead
+//    modalContainer.classList.add('visible');
     });
   }
 
 //  Adding a function to hide pokemon details when the close button in the modal is clicked
+/*  Commenting out to use Bootstrap modal functionality instead
   function hideDetails () {
     modalContainer.classList.remove('visible');
   }
@@ -170,7 +172,7 @@ which has been created below to separate adding new items from adding new event 
     if (e.target === modalContainer) {
       hideDetails();
     }
-  });
+  });  */
 
 //  Adding a function to allow users to search for a pokemon just using name
   function find(pokemonName) {
@@ -213,7 +215,7 @@ which has been created below to separate adding new items from adding new event 
     getAll: getAll,
     add: add,
     addListItem: addListItem,
-    addButtonListener: addButtonListener,
+//    addButtonListener: addButtonListener,
     showDetails: showDetails,
     find: find,
     loadList: loadList,
