@@ -44,7 +44,7 @@ h1 {
   background-color: #4287f5;
 }  */
 
-#modal-container {
+/*  #modal-container {
   display: none;
 }
 
@@ -133,10 +133,10 @@ h1 {
 /*  .pokemon-button:hover,
   .pokemon-button:focus {
     font-size: 1.7rem;
-  }  */
-}
+  }
+}  */  
 
-@media all and (min-width: 750px) and (max-width: 1200px) {
+/*  @media all and (min-width: 750px) and (max-width: 1200px) {
   .modal {
     width: 30vw;
     margin: 20vh auto;
@@ -158,4 +158,4 @@ h1 {
     width: 20vw;
     padding: 3vw;
   }
-}
+}  */
