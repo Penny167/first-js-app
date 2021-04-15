@@ -88,8 +88,8 @@ Note that this requires an additional function to compare the array values.  */
     let button = document.createElement('button');
     button.innerText = pokemon.name;
     button.classList.add('pokemon-button', 'btn', 'btn-primary');
-    button.setAttribute('data-toggle, modal');
-    button.setAttribute('data-target, modalContainer');
+    button.setAttribute("data-toggle, modal");
+    button.setAttribute("data-target, modalContainer");
 /*  The code below is superseded by the additional function addButtonListener,
 which has been created below to separate adding new items from adding new event listeners  */
 /*    button.addEventListener('click', function(){
@@ -123,8 +123,6 @@ which has been created below to separate adding new items from adding new event 
 
     let closeButton = document.createElement('button');
     closeButton.classList.add('close-button', 'close');
-    closeButton.setAttribute('type, button');
-    closeButton.setAttribute('data-dismiss, modal');
     //  closeButton.innerText = 'x';
     //  closeButton.addEventListener('click', hideDetails);
 
