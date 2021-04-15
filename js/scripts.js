@@ -128,7 +128,6 @@ which has been created below to separate adding new items from adding new event 
 
     let title = document.createElement('h1');
     title.innerText = pokemon.name;
-    title.classList.add('modal-title');
 
     let content = document.createElement('p');
     content.innerText = ('height: '+ pokemon.height);
@@ -139,7 +138,7 @@ which has been created below to separate adding new items from adding new event 
     modal.appendChild(modalContent);
     modalContent.appendChild(modalHeader);
     modal.appendChild(closeButton);
-    modalHeader.appendChild(title);
+    modal.appendChild(title);
     modal.appendChild(content);
     modal.appendChild(image);
     modalContainer.appendChild(modal);
