@@ -204,8 +204,8 @@ in order to implement the Bootstrap modal
     getAll: getAll,
     add: add,
     addListItem: addListItem,
-    addButtonListener: addButtonListener,
-    showDetails: showDetails,
+//    addButtonListener: addButtonListener,
+//    showDetails: showDetails,
     find: find,
     loadList: loadList,
     loadDetails: loadDetails
