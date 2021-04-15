@@ -122,9 +122,9 @@ which has been created below to separate adding new items from adding new event 
     modalHeader.classList.add('modal-header');
 
     let closeButton = document.createElement('button');
-    closeButton.classList.add('close-button', 'close');
-    //  closeButton.innerText = 'x';
-    //  closeButton.addEventListener('click', hideDetails);
+    closeButton.classList.add('close-button');
+    closeButton.innerText = 'x';
+    closeButton.addEventListener('click', hideDetails);
 
     let title = document.createElement('h1');
     title.innerText = pokemon.name;
