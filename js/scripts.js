@@ -89,7 +89,7 @@ Note that this requires an additional function to compare the array values.  */
     button.innerText = pokemon.name;
     button.classList.add('pokemon-button', 'btn', 'btn-primary');
     button.setAttribute('data-toggle', 'modal');
-    button.setAttribute('data-target', '#modal-container');
+    button.setAttribute('data-target', 'modalContainer');
 /*  The code below is superseded by the additional function addButtonListener,
 which has been created below to separate adding new items from adding new event listeners  */
 /*    button.addEventListener('click', function(){
