@@ -84,12 +84,9 @@ Note that this requires an additional function to compare the array values.  */
   function addListItem(pokemon) {
     let outputList = document.querySelector('ul');
     let outputListItem = document.createElement('li');
-    outputListItem.classList.add('list-group-item');
     let button = document.createElement('button');
     button.innerText = pokemon.name;
-    button.classList.add('pokemon-button', 'btn', 'btn-primary');
-    button.setAttribute("data-toggle, modal");
-    button.setAttribute("data-target, modalContainer");
+    button.classList.add('pokemon-button');
 /*  The code below is superseded by the additional function addButtonListener,
 which has been created below to separate adding new items from adding new event listeners  */
 /*    button.addEventListener('click', function(){
