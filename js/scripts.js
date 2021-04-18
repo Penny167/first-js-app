@@ -173,12 +173,13 @@ in order to implement the Bootstrap modal  */
     modalTitle.empty();
     modalBody.empty();
 
-    let name = $('<h5>' + pokemon.name + '</h5>');
+    let name = $('<h1>' + pokemon.name + '</h1>');
     let height = $('<p>' + 'height: ' + pokemon.height + '</p>');
-    let image = $('<img>').attr({'src':pokemon.imgUrl, 'width':'50%'});
+    let image = $('<img>').attr('src', pokemon.imgUrl);
 
     modalTitle.append(name);
-    modalBody.append(height, image);
+    modalBody.append(height);
+    modalBody.append(image);
     });
   }
 
