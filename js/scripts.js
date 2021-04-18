@@ -164,8 +164,6 @@ in order to implement the Bootstrap modal  */
 
 //  Adding a new function to show pokemon details in a Bootstrap modal
   function showPokemon(pokemon) {
-    loadDetails(pokemon).then(function(){
-
     let modalHeader = $('.modal-header');
     let modalTitle = $('.modal-title');
     let modalBody = $('.modal-body');
@@ -174,13 +172,12 @@ in order to implement the Bootstrap modal  */
     modalBody.empty();
 
     let name = $('<h1>' + pokemon.name + '</h1>');
-    let height = $('<p>' + 'height: ' + pokemon.height + '</p>');
+    let height = $('<p>' + pokemon.height + '</p>');
     let image = $('<img>').attr('src', pokemon.imgUrl);
 
     modalTitle.append(name);
     modalBody.append(height);
     modalBody.append(image);
-    });
   }
 
 //  Adding a function to allow users to search for a pokemon just using name
