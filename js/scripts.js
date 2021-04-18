@@ -1,9 +1,52 @@
+/*  let pokemonList = [
+  {name: 'Charmander', height: 2, types:['fire'], weaknesses:['water', 'ground', 'rock']},
+  {name: 'Pikachu', height: 1.33, types:['electric'], weaknesses:['ground']},
+  {name: 'Jigglypuff', height: 1.67, types:['normal', 'fairy'], weaknesses:['steel', 'poison']},
+  {name: 'Wigglytuff', height: 3.25, types:['normal', 'fairy'], weaknesses:['steel', 'poison']}
+];
+
+//  create a for loop that iterates over each item in pokemonList and returns its name and height
+/*  for (let i = 0; i < pokemonList.length; i++) {
+//  document.write((pokemonList[i].name + ' ' + '(height: ' + pokemonList[i].height) + ')');
+//  using a template literal instead:
+document.write(`${pokemonList[i].name} (height: ${pokemonList[i].height})`);
+}  */
+
+/*  this time, I am storing my result as a variable so that I can neatly include
+it within html <p> tags. This will also display the results on separate lines  */
+/*  for (let i = 0; i < pokemonList.length; i++) {
+  let pokemonStats = `${pokemonList[i].name} (height: ${pokemonList[i].height})`;
+//  document.write('<p>' + pokemonStats + '</p>');
+
+/*  now I am declaring a new variable in order to compare heights for the purpose
+of highlighting "special" pokemon */
+/*  let pokemonHeight = pokemonList[i].height;
+/*  now I am redefining the content that I want to display to include the result
+of the conditional statement within the <p> tags  */
+/*  if (pokemonHeight > 3) {
+    document.write('<p>' + pokemonStats + " Wow,that's big!" + '</p>');
+  } else document.write('<p>' + pokemonStats + '</p>');
+}  */
+
+//  now I am rewriting the above code using a template literal to improve readability
+
+/*  if (pokemonHeight > 3) {
+    document.write(`<p>${pokemonStats} Wow,that's big!</p>`);
+  } else document.write(`<p>${pokemonStats}</p>`);
+}
+
+/*  At this stage, I am going to copy all of my current functioning code below
+without the comments to work on the next set of changes, whilst preserving
+the old version including the comments in a commented out version above  */
+
 //  Creating an IIFE to house the pokemonList
 let pokemonRepository = (function(){
+/* I am now deleting the array contents so these can be replaced by the dynamic data from
+the pokeapi (NB I have a copy of the original static data retained at the top of the file)  */
   let pokemonList = [];
 //  Storing the url of the api in a variable
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
-//  Creating a variable for the modal container
+//  Creating a variable for the modal container as it is used in multiple places
   let modalContainer = document.querySelector('#modal-container');
 //  The IIFE will return an object with keys for each function
 //  I am separating the functions that define the values of the keys from the return statement
@@ -68,6 +111,56 @@ in order to implement the Bootstrap modal  */
       showPokemon(pokemon);
     });
   }
+
+/*  Adding a function to allow users to see details of a pokemon when clicked
+  function showDetails(pokemon) {
+    loadDetails(pokemon).then(function(){
+    modalContainer.innerHTML = "";
+
+    let modal = document.createElement('div');
+    modal.classList.add('modal');
+
+    let closeButton = document.createElement('button');
+    closeButton.classList.add('close-button');
+    closeButton.innerText = 'x';
+    closeButton.addEventListener('click', hideDetails);
+
+    let title = document.createElement('h1');
+    title.innerText = pokemon.name;
+
+    let content = document.createElement('p');
+    content.innerText = ('height: '+ pokemon.height);
+
+    let image = document.createElement('img');
+    image.src = pokemon.imgUrl;
+
+    modal.appendChild(closeButton);
+    modal.appendChild(title);
+    modal.appendChild(content);
+    modal.appendChild(image);
+    modalContainer.appendChild(modal);
+    modalContainer.classList.add('visible');
+    });
+  }
+
+//  Adding a function to hide pokemon details when the close button in the modal is clicked
+  function hideDetails () {
+    modalContainer.classList.remove('visible');
+  }
+
+// Adding an event listener to the window to close the modal when the user presses 'Escape'
+  window.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modalContainer.classList.contains('visible')) {
+      hideDetails();
+    }
+  });
+
+// Adding event listener to modal container to close modal if user clicks outside the modal
+  modalContainer.addEventListener('click', function(e) {
+    if (e.target === modalContainer) {
+      hideDetails();
+    }
+  });  */
 
 //  Adding a new function to show pokemon details in a Bootstrap modal
   function showPokemon(pokemon) {
@@ -138,6 +231,22 @@ in order to implement the Bootstrap modal  */
     showPokemon: showPokemon
   };
 })();
+
+//  This is a new pokemon that I am using to test whether the conditions of the add function work
+/*  Commenting this out for that I am loading pokemons directly from the api data
+pokemonRepository.add({name: 'Ivysaur', height: 1, types:['grass', 'poison'], weaknesses: ['fire', 'psychic', 'flying', 'ice']});  */
+
+//  I am commenting out this version of the forEach code block to create a fresh version for task 6
+//  replace for loop with forEach() function
+/*  update array name in the forEach function to reference the array via the getAll
+key within the IIFE 'pokemonRepository'  */
+/*  pokemonRepository.getAll().forEach(function(pokemon) {
+  let pokemonStats = `${pokemon.name} (height: ${pokemon.height})`;
+  let pokemonHeight = pokemon.height;
+  if (pokemonHeight > 3) {
+    document.write(`<p>${pokemonStats} Wow,that's big!</p>`);
+  } else document.write(`<p>${pokemonStats}</p>`);
+});  */
 
 //  Calling the loadList function to retrieve data prior to rendering the page
 pokemonRepository.loadList().then(function(){
