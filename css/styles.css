@@ -1,12 +1,11 @@
-body {
-/*  color: #efe96b;
-  background-color: #ef6bb3;  */
+/*  body {
+  color: #efe96b;
+  background-color: #ef6bb3;
   font-family: 'Acme', sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.6;
   text-align: center;
-  color: #0275d8;
 }
 
 h1 {
@@ -14,8 +13,8 @@ h1 {
   font-weight: 700;
   text-align: center;
   margin: 1.25em 0;
-/*  text-shadow: -0.125em 0.05em #4287f5;  */
-}
+  text-shadow: -0.125em 0.05em #4287f5;
+}  */
 
 /*  ul {
   list-style-type: none;
