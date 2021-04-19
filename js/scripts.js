@@ -110,6 +110,7 @@ let pokemonRepository = (function(){
         add(pokemon);
       });
     }).catch(function(error){
+/* eslint-disable no-console */
       console.log(error);
     });
   }
@@ -123,6 +124,7 @@ let pokemonRepository = (function(){
       pokemon.types = pokemonDetails.types;
     }).catch(function(error){
       console.log(error);
+/* eslint-enable no-console */
     });
   }
 
