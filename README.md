@@ -8,7 +8,6 @@ data points in detail.
 - Data is retrieved using the JavaScript Fetch API.
 - Detailed data points are displayed within a custom modal.
 
-- Summary data is displayed on loading the page. Detailed data is fetched as needed
-- when the user clicks a selected pokemon button to reduce page loading time.
+- Summary data is displayed on loading the page. Detailed data is fetched as needed when the user clicks a selected pokemon button to reduce page loading time.
 
 - JavaScript has been linted using ESLint default rules.
