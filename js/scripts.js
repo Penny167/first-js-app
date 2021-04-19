@@ -45,7 +45,7 @@ let pokemonRepository = (function(){
       showDetails(pokemon);
     });
   }
-//  Function to generate and display details of a pokemon when clicked
+//  Function to generate and display in a modal details of a pokemon when clicked
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function(){
 
@@ -92,11 +92,6 @@ let pokemonRepository = (function(){
       hideDetails();
     }
   });
-//  Function to allow users to search for a pokemon just using name
-  function find(pokemonName) {
-    let found = pokemonList.filter(pokemon => pokemon.name === pokemonName);
-    return found;
-  }
 //  Function to load pokemon data from the pokeapi
   function loadList() {
     return fetch(apiUrl).then(function(response){
@@ -134,7 +129,6 @@ let pokemonRepository = (function(){
     addListItem: addListItem,
     addButtonListener: addButtonListener,
     showDetails: showDetails,
-    find: find,
     loadList: loadList,
     loadDetails: loadDetails
   };
