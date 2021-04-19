@@ -114,6 +114,7 @@ ul {
   color: inherit;
   font-size: 1.5em;
   line-height: 1.6;
+  cursor: pointer;
 }
 
 @media all and (max-width: 320px) {
