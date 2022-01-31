@@ -11,7 +11,7 @@ body {
 header {
   box-sizing: border-box;
   margin: 1.3em auto;
-  height: 15vh;
+  height: 20vh;
   padding-top: 5vh;
 }
 
@@ -33,6 +33,10 @@ h1:hover, focus {
 }
 
 span {
+  color: #4287f5;
+}
+
+span:hover {
   color: #efe96b;
 }
 
@@ -130,6 +134,12 @@ ul {
   p {
     font-size: 0.7rem;
   }
+  header {
+    height: 15vh;
+  }
+  .instructions {
+    font-size: 0.9em
+  }
 }
 
 @media all and (min-width: 321px) and (max-width: 749px) {
@@ -144,6 +154,12 @@ ul {
   }
   p {
     font-size: 0.75rem;
+  }
+  header {
+    height: 15vh;
+  }
+  .instructions {
+    font-size: 1em
   }
 }
 
@@ -168,6 +184,12 @@ ul {
   }
   p {
     font-size: 1.25rem;
+  }
+  header {
+    height: 15vh;
+  }
+  .instructions {
+    font-size: 1em
   }
 }
 

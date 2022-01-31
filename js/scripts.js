@@ -1,9 +1,11 @@
-//  Creating an IIFE to house the pokemonList
+//  Creating an IIFE to house the pokemonRepository
 let pokemonRepository = (function(){
+
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 //  Creating a variable for the modal container as it is used in multiple places
   let modalContainer = document.querySelector('#modal-container');
+
 //  Function to return the pokemonList array
   function getAll() {
     return pokemonList;
@@ -18,7 +20,8 @@ let pokemonRepository = (function(){
     });
     return isEqual;
   }
-//  Function to add pokemon to the pokemonList array
+
+//  Function to add a pokemon to the pokemonList array
   function add(pokemon) {
     let pokemonKeys = Object.keys(pokemon);
     let requiredKeys = ['name', 'detailsUrl'];
@@ -27,6 +30,7 @@ let pokemonRepository = (function(){
         pokemonList.push(pokemon);
     }
   }
+
 //  Function to add a new item to the list of pokemon
   function addListItem(pokemon) {
     let outputList = document.querySelector('ul');
@@ -39,14 +43,17 @@ let pokemonRepository = (function(){
     outputList.appendChild(outputListItem);
     addButtonListener(button, pokemon);
   }
+
 // Function to create event listeners on newly created buttons
   function addButtonListener(button, pokemon) {
     button.addEventListener('click', function(){
       showDetails(pokemon);
     });
   }
+
 //  Function to generate and display in a modal details of a pokemon when clicked
   function showDetails(pokemon) {
+    
     loadDetails(pokemon).then(function(){
 
     modalContainer.innerHTML = '';
@@ -76,22 +83,26 @@ let pokemonRepository = (function(){
     modalContainer.classList.add('visible');
     });
   }
+
 //  Function to hide pokemon details when the close button in the modal is clicked
   function hideDetails () {
     modalContainer.classList.remove('visible');
   }
+
 // Adding an event listener to the window to close the modal when the user presses 'Escape'
   window.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && modalContainer.classList.contains('visible')) {
       hideDetails();
     }
   });
+
 // Adding an event listener to the modal container to close the modal if the user clicks outside the modal
   modalContainer.addEventListener('click', function(e) {
     if (e.target === modalContainer) {
       hideDetails();
     }
   });
+
 //  Function to load pokemon data from the pokeapi
   function loadList() {
     return fetch(apiUrl).then(function(response){
@@ -109,6 +120,7 @@ let pokemonRepository = (function(){
       console.log(error);
     });
   }
+  
 //  Function to load pokemon details from the detailsUrl for a selected pokemon
   function loadDetails(pokemon) {
     return fetch(pokemon.detailsUrl).then(function(response){
