@@ -1,13 +1,32 @@
-# Project Description
+# Pokédex!
 
-The objective of this project was to build a small web application with HTML, CSS,
-and JavaScript that loads data from an external API and enables the viewing of
-data points in detail.
+Pokédex is a simple, responsive web application built using HTML, CSS and JavaScript that uses data from an external API to create a directory of Pokémons. Users can scroll through the directory and click on a Pokémon to view further details, which are displayed in a modal. 
 
-- This project uses the Pokemon API: pokeapi.
-- Data is retrieved using the JavaScript Fetch API.
-- Detailed data points are displayed within a custom modal.
+## Live website
 
-- Summary data is displayed on loading the page. Detailed data is fetched as needed when the user clicks a selected pokemon button to reduce page loading time.
+Visit Pokédex [here](https://penny167.github.io/first-js-app/)
 
-- JavaScript has been linted using ESLint default rules.
+## Key Features
+
+- The application uses the native JavaScript Fetch API to retrieve Pokémon data from the PokéApi.
+- On launching the application the user is presented with a directory of all Pokémon. They can scroll through the list and click on any Pokémon to see its details; a modal will pop up displaying the Pokémon's name, height and image. The modal can be dismissed either by clicking its close button or the screen outside the modal.
+- Separate API endpoints are used for the summary data in the directory and the detailed data about individual Pokémon in order to reduce page loading times.
+- The application has been styled using bespoke css with fun colours and hover effects.
+- Fetch and Promise polyfills have been used to provide support for older browsers.
+- Media queries have been used to make the application responsive.
+- The JavaScript has been linted using ESLint default rules.
+- The application has been published to GitHub pages and is accessible using the link above.
+
+## Languages used
+
+- HTML
+- CSS
+- Javascript
+
+## Installation and set up
+
+To replicate the application, simply clone the files from GitHub then launch the index.html file in your browser.
+
+## Author
+
+GitHub: [@penny167](https://github.com/Penny167)

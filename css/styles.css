@@ -121,6 +121,11 @@ ul {
   cursor: pointer;
 }
 
+#footer {
+  color: #4287f5;
+  font-size: small;
+}
+
 @media all and (max-width: 320px) {
   .modal {
     width: 40vw;
@@ -170,6 +175,10 @@ ul {
   .pokemon-button:hover,
   .pokemon-button:focus {
     font-size: 1.7rem;
+  }
+  #footer {
+    color: #4287f5;
+    font-size: medium;
   }
 }
 
