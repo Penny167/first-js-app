@@ -2,7 +2,7 @@
 
 ![Pokédemo](Pokégif.gif)
 
-Pokédex is a simple, responsive web application built using HTML, CSS and JavaScript that uses data from an external API to create a directory of Pokémons. Users can scroll through the directory and click on a Pokémon to view further details, which are displayed in a modal. 
+Pokédex is a simple, responsive web application built using HTML, CSS and JavaScript that uses data from an external API to create a directory of Pokémon. Users can scroll through the directory and click on a Pokémon to view further details, which are displayed in a modal. 
 
 ## Live website
 
