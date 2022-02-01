@@ -1,4 +1,4 @@
-<h1 align = "center"> Pokédex </h1>
+<h1> Pokédex! </h1>
 
 ![Pokédemo](Pokégif.gif)
 
