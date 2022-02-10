@@ -19,7 +19,7 @@ Visit Pokédex [here](https://penny167.github.io/first-js-app/)
 - The JavaScript has been linted using ESLint default rules.
 - The application has been published to GitHub pages and is accessible using the live website link above.
 
-## Languages used
+## Languages
 
 - HTML
 - CSS
